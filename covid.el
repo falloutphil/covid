@@ -282,4 +282,4 @@
     (org-plot/gnuplot)))
 
 (provide 'covid)
-;;; covid ends here
+;;; covid.el ends here
