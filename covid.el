@@ -8,7 +8,7 @@
 ;; Modified: 14 Nov 2020
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "26.3"))
-;; Keywords: covid
+;; Keywords: covid corona
 ;; URL: https://github.com/falloutphil/covid
 ;; This program is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License as
