@@ -1,4 +1,4 @@
-;;; covid.el --- A case calculation tool using WHO Data  -*- lexical-binding: t; -*-
+;;; covid --- A case calculation tool using WHO Data  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2020 Philip Beadling
 
@@ -282,4 +282,4 @@
     (org-plot/gnuplot)))
 
 (provide 'covid)
-;;; covid.el ends here
+;;; covid ends here
