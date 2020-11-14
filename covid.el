@@ -7,7 +7,7 @@
 ;; Created: 14 Nov 2020
 ;; Modified: 14 Nov 2020
 ;; Version: 1.0
-;; Package-Requires: ((emacs "25.2"))
+;; Package-Requires: ((emacs "26.3"))
 ;; Keywords: data covid corona
 ;; URL: https://github.com/falloutphil/covid
 ;; This program is free software; you can redistribute it and/or
