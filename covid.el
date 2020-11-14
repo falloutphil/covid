@@ -1,4 +1,4 @@
-;;; covid.el --- A covid case calculation tool using live WHO Data  -*- lexical-binding: t; -*-
+;;; covid --- A covid case calculation tool using live WHO Data  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2020 Philip Beadling
 
@@ -250,7 +250,7 @@
   (map-keys covid-country-population-alist))
 
 ;;;###autoload
-(defun covid-country-history (country start-date max-cases)
+(defun covid (country start-date max-cases)
   "Helper function to get covid details from COUNTRY.  If POPULATION is non-zero this is used directly (eg to match ECDC numbers).  START-DATE dictates X-Axis start.  MAX-CASES dictates Y-Axis scale for ASCII plots."
   (interactive (list (ido-completing-read "Country? " covid-country-list)
 		     (org-read-date nil nil nil "Plot Start Date? "
@@ -284,4 +284,4 @@
     (org-plot/gnuplot)))
 
 (provide 'covid)
-;;; covid.el ends here
+;;; covid ends here
