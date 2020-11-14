@@ -283,5 +283,5 @@
   (when (require 'gnuplot nil 'noerror)
     (org-plot/gnuplot)))
 
-(provide 'covid-country-history)
+(provide 'covid)
 ;;; covid.el ends here
