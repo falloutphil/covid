@@ -26,12 +26,13 @@
 ;; Boston, MA 02111-1307, USA.
 
 ;;; Commentary:
-;; Calculates per-country 14 and 7 day cumulative new cases from WHO data, 
+;; Calculates per-country 14 and 7 day cumulative new cases from WHO data,
 ;; and presents this data in tables and plots for a given date range.
 ;; Optionally plot data using gnuplot if org-plot/gnuplot is installed.
 
 ;;; Code:
 (require 'org)
+(require 'map)
 
 ;; Static taken from ECDC daily covid data
 (defvar covid-country-population-alist
@@ -248,7 +249,7 @@
   (map-keys covid-country-population-alist))
 
 (defun covid-country-history (country start-date max-cases)
-  "Helper function to get covid details from COUNTRY.  If POPULATION is non-zero this is used directly (eg to match ECDC numbers).  START-DATE dictates X-Axis start. MAX-CASES dictates Y-Axis scale for ASCII plots."
+  "Helper function to get covid details from COUNTRY.  If POPULATION is non-zero this is used directly (eg to match ECDC numbers).  START-DATE dictates X-Axis start.  MAX-CASES dictates Y-Axis scale for ASCII plots."
   (interactive (list (ido-completing-read "Country? " covid-country-list)
 		     (org-read-date nil nil nil "Plot Start Date? "
 				    (org-time-string-to-time "2020-01-01"))
