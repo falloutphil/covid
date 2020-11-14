@@ -1,4 +1,4 @@
-;;; covid --- A case calculation tool using WHO Data  -*- lexical-binding: t; -*-
+;;; covid --- A covid case calculation tool using live WHO Data  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2020 Philip Beadling
 
