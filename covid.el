@@ -1,6 +1,33 @@
-;;; covid --- summary info.
+;;; covid.el --- A case calculation tool using WHO Data  -*- lexical-binding: t; -*-
+
+;; Copyright (C) 2020 Philip Beadling
+
+;; Author: Philip Beadling <phil@beadling.co.uk>
+;; Maintainer: Philip Beadling <phil@beadling.co.uk>
+;; Created: 14 Nov 2020
+;; Modified: 14 Nov 2020
+;; Version: 1.0
+;; Package-Requires: ((emacs "26.3"))
+;; Keywords: covid
+;; URL: https://github.com/falloutphil/covid
+;; This program is free software; you can redistribute it and/or
+;; modify it under the terms of the GNU General Public License as
+;; published by the Free Software Foundation; either version 3, or (at
+;; your option) any later version.
+
+;; This program is distributed in the hope that it will be useful, but
+;; WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+;; General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with GNU Emacs; see the file COPYING.  If not, write to the
+;; Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+;; Boston, MA 02111-1307, USA.
+
 ;;; Commentary:
-;;; Calculates 14 and 7 day cumulative new cases from WHO data.
+;; Calculates per-country 14 and 7 day cumulative new cases from WHO data, 
+;; and presents this data in tables and plots for a given date range.
 
 ;;; Code:
 (require 'org)
