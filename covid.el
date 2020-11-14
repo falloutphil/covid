@@ -33,6 +33,7 @@
 ;;; Code:
 (require 'org)
 (require 'map)
+(require 'ido)
 
 ;; Static taken from ECDC daily covid data
 (defvar covid-country-population-alist
@@ -248,6 +249,7 @@
 (defvar covid-country-list
   (map-keys covid-country-population-alist))
 
+;;;###autoload
 (defun covid-country-history (country start-date max-cases)
   "Helper function to get covid details from COUNTRY.  If POPULATION is non-zero this is used directly (eg to match ECDC numbers).  START-DATE dictates X-Axis start.  MAX-CASES dictates Y-Axis scale for ASCII plots."
   (interactive (list (ido-completing-read "Country? " covid-country-list)
@@ -281,5 +283,5 @@
   (when (require 'gnuplot nil 'noerror)
     (org-plot/gnuplot)))
 
-(provide 'covid)
+(provide 'covid-country-history)
 ;;; covid.el ends here
