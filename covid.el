@@ -33,7 +33,6 @@
 ;;; Code:
 (require 'org)
 (require 'map)
-(require 'ido)
 
 ;; Static taken from ECDC daily covid data
 (defvar covid-country-population-alist
