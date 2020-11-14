@@ -28,6 +28,7 @@
 ;;; Commentary:
 ;; Calculates per-country 14 and 7 day cumulative new cases from WHO data, 
 ;; and presents this data in tables and plots for a given date range.
+;; Optionally plot data using gnuplot if org-plot/gnuplot is installed.
 
 ;;; Code:
 (require 'org)
