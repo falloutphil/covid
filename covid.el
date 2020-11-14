@@ -8,7 +8,7 @@
 ;; Modified: 14 Nov 2020
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "26.3"))
-;; Keywords: covid corona
+;; Keywords: data covid corona
 ;; URL: https://github.com/falloutphil/covid
 ;; This program is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License as
@@ -273,8 +273,8 @@
 				   covid-country-population-alist)))))
     ;; Zero data until last element of initial window, last element is then just copied (and scaled),
     ;; after that it's the difference between the last and first cumulative values in the window.
-    (insert (format "#+TBLFM: @2$9..@14$9 = 0 :: @15$9 =  $6 * %f :: @16$9..@>$9 = ($6 - @-14$6) * %f :: @2$10..@7$10 = 0 :: @8$10 =  $6 * %f :: @9$10..@>$10 = ($6 - @-7$6) * %f :: @2$11 = 0 :: @3$11..@>$11 = vmax([$10 @-1]) :: $12 = '(orgtbl-uc-draw-grid $10 0 max-cases 40)"
-		    p p p p)))
+    (insert (format "#+TBLFM: @2$9..@14$9 = 0 :: @15$9 =  $6 * %f :: @16$9..@>$9 = ($6 - @-14$6) * %f :: @2$10..@7$10 = 0 :: @8$10 =  $6 * %f :: @9$10..@>$10 = ($6 - @-7$6) * %f :: @2$11 = 0 :: @3$11..@>$11 = vmax([$10 @-1]) :: $12 = '(orgtbl-uc-draw-grid $10 0 %d 40)"
+		    p p p p max-cases)))
   (org-ctrl-c-ctrl-c)
   (org-ctrl-c-ctrl-c) ;recalc (twice or graph is missing?!)
   (goto-char (point-min))
